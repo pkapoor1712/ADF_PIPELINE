@@ -1,0 +1,28 @@
+{
+	"name": "cdc_storage_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_datastore",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "cdc.json",
+				"folderPath": "source",
+				"fileSystem": "storage-container"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"cdc_timestamp": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

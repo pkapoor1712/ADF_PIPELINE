@@ -1,0 +1,44 @@
+{
+	"name": "cdc_json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_datastore",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_container": {
+				"type": "string",
+				"defaultValue": "storage-container"
+			},
+			"p_files": {
+				"type": "string",
+				"defaultValue": null
+			},
+			"p_folder": {
+				"type": "string",
+				"defaultValue": null
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_files",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().p_folder",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().p_container",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

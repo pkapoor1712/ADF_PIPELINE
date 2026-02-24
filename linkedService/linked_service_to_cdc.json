@@ -1,0 +1,13 @@
+{
+	"name": "linked_service_to_cdc",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/pkapoor1712/ADVANCE_ADF_PROJECT/refs/heads/main/cdc.json",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

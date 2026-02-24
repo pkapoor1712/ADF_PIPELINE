@@ -1,0 +1,9 @@
+{
+	"name": "pk-advance-project",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "75567ecf-f2eb-4753-8cab-c297d9fbfd47",
+		"tenantId": "3211f43b-ee38-4d64-95d0-a29cad376485"
+	}
+}
